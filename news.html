@@ -1,0 +1,99 @@
+<html>
+<head>
+	<link rel="stylesheet" href="style.css">
+	<title>Новини</title>
+</head>
+<body>
+<div class="news">
+	<div class="header">
+		<div class="logos">
+			<a href="index.html"><img src="img/Rise Of Vikings.png" class="logo1"></a>
+			<img src="img/line.png" class="logo2">
+			<img src="img/logo-Lilith-300x 1.png" class="logo3">
+		</div>
+		<div class="pages">
+			<ul type="none" class="pages_inside">
+				<li class="page"><a href="news.html" type="none">Новини</a></li>
+				<li class="page"><a href="media.html" type="none">Медіа</a></li>
+			</ul>
+		</div>
+		<a href="download.html">
+		<div class="button">
+			<p class="text_button">Завантажити</p>
+		</div>
+		</a>
+	</div>
+	<div class="news_style" id="news_container">
+		<a href="news_1.html">
+		<div class="news_style1 news_item">
+			<div class="news_style1_photo">
+				<img src="img/news_photo1.png">
+			</div>
+			<div class="news_style1_text">
+				<p class="news_style1_text1">Глобальне оновлення 2.4. Нові споруди та війська</p>
+				<p class="news_style1_text2">Оновлення виносить гру в новий рівень стратегічного військового мистецтва. Тепер вам доступні нові споруди та війська, щоб збільшити ваш вплив і стати ще більшим великим вождем вікінгів.</p>
+				<p class="news_style1_text3">Читати більше...</p>
+			</div>
+		</div>
+		</a>
+		<a href="news_2.html">
+		<div class="news_style2 news_item">
+			<div class="news_style1_photo">
+				<img src="img/news_photo2.png">
+			</div>
+			<div class="news_style1_text">
+				<p class="news_style1_text1">Глобальне оновлення 2.3. Розширення ігрової мапи</p>
+				<p class="news_style1_text2">З новим оновленням 2.3 гра відкриває для вас ще більше таємничих і захоплюючих територій для дослідження та завоювання. Перед вами розкривається новий світ для вікінгських владарів, де можливості безмежні.</p>
+				<p class="news_style1_text3">Читати більше...</p>
+			</div>
+		</div>
+		</a>
+		<div class="news_style3 news_item">
+			<div class="news_style1_photo">
+				<img src="img/news_photo3.png">
+			</div>
+			<div class="news_style1_text">
+				<p class="news_style1_text1_2">Баг-фікс 2.2.2</p>
+				<p class="news_style1_text2_2">Виправлення незначних багів та оптимізація гри.</p>
+				<p class="news_style1_text3_2">Читати більше...</p>
+			</div>
+		</div>
+		<div class="news_style4 news_item">
+			<div class="news_style1_photo">
+				<img src="img/news_photo4.png">
+			</div>
+			<div class="news_style1_text">
+				<p class="news_style1_text1_2">Баг-фікс 2.2.1</p>
+				<p class="news_style1_text2_2">Виправлення незначних багів та оптимізація гри.</p>
+				<p class="news_style1_text3_2">Читати більше...</p>
+			</div>
+		</div>
+	</div>
+	<div class="futter">
+		<div class="futter_logo">
+			<img src="img/Rise Of Vikings (large).png" class="futter_logo1">
+		</div>
+		<p class="futter_text1">PRIVACY POLICY | TERMS OF SERVICE</p>
+		<p class="futter_text2">© 2022, LILITH GAMES - ALL RIGHTS RESERVED</p>
+	</div>
+</div>
+</body>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const items = document.querySelectorAll(".news_item");
+
+    items.forEach((item, index) => {
+      item.style.opacity = 0;
+      item.style.transform = "translateY(20px)";
+      item.style.transition = "opacity 0.6s ease-out, transform 0.6s ease-out";
+    });
+
+    items.forEach((item, index) => {
+      setTimeout(() => {
+        item.style.opacity = 1;
+        item.style.transform = "translateY(0)";
+      }, index * 300); // затримка між елементами: 300 мс
+    });
+  });
+</script>
+</html>

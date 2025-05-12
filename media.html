@@ -1,0 +1,89 @@
+<html>
+<head>
+	<link rel="stylesheet" href="style.css">
+	<title>Медіа</title>
+</head>
+<body>
+<div class="index">
+	<div class="header">
+		<span class="container"></span>
+		<div class="logos">
+			<a href="index.html"><img src="img/Rise Of Vikings.png" class="logo1"></a>
+			<img src="img/line.png" class="logo2">	
+			<img src="img/logo-Lilith-300x 1.png" class="logo3">
+		</div>
+		<div class="pages">
+			<ul type="none" class="pages_inside">
+				<li class="page"><a href="news.html" type="none">Новини</a></li>
+                <li class="page"><a href="media.html" type="none">Медіа</a></li>
+			</ul>
+		</div>
+		<a href="download.html">
+		<div class="button">
+			<p class="text_button">Завантажити</p>
+		</div>
+		</a>
+	</div>
+	<div class="media_container">
+		<div class="media_1">
+            <div class="media_title">
+                <p class="media_title_style">Персонажі</p>
+            </div>
+            <div class="media_1_content">
+                <img src="img/media_1.1.png">
+                <img src="img/media_1.2.png">
+                <img src="img/media_1.3.png">
+                <img src="img/media_1.4.png">
+            </div>
+        </div>
+        <div class="media_2">
+            <div class="media_title">
+                <p class="media_title_style">Локації</p>
+            </div>
+            <div class="media_2_content">
+                <img src="img/media_2.4.png">
+                <img src="img/media_2.2.png">
+                <img src="img/media_2.3.png">
+                <img src="img/media_2.4.png">
+            </div>
+        </div>
+        <div class="media_3">
+            <div class="media_title">
+                <p class="media_title_style">Зброя</p>
+            </div>
+            <div class="media_3_content">
+                <img src="img/media_3.1.png">
+                <img src="img/media_3.2.png">
+                <img src="img/media_3.3.png">
+                <img src="img/media_3.4.png">
+            </div>
+        </div>
+	</div>
+	<div class="futter">
+		<div class="futter_logo">
+			<img src="img/Rise Of Vikings (large).png" class="futter_logo1">
+		</div>
+		<p class="futter_text1">PRIVACY POLICY | TERMS OF SERVICE</p>
+		<p class="futter_text2">© 2022, LILITH GAMES - ALL RIGHTS RESERVED</p>
+	</div>
+</div>
+</body>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const imageContainers = document.querySelectorAll('.media_1_content img, .media_2_content img, .media_3_content img');
+
+    imageContainers.forEach((img, index) => {
+        img.style.opacity = 0;
+        img.style.transform = "translateX(-30px)";
+        img.style.transition = "opacity 0.6s ease-out, transform 0.6s ease-out";
+    });
+
+    imageContainers.forEach((img, index) => {
+        setTimeout(() => {
+            img.style.opacity = 1;
+            img.style.transform = "translateX(0)";
+        }, index * 300);
+    });
+});
+</script>
+</html>
